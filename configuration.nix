@@ -36,10 +36,12 @@
     onActivation.extraFlags = [ "--force" ];
     brews = [
       "herdr"
+      "tmux"
     ];
     casks = [
       "wezterm"
       "claude-code"
+      "cursor-cli"
     ];
   };
 }
