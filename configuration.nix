@@ -37,6 +37,7 @@
     brews = [
       "herdr"
       "tmux"
+      "python"
     ];
     casks = [
       "wezterm"
