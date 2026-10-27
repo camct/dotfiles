@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local act = wezterm.action
 
 local config = wezterm.config_builder()
 
@@ -14,9 +15,12 @@ config.keys = {
     key = 'n',
     mods = 'SHIFT|CTRL',
     action = wezterm.action.ToggleFullScreen,
-  },
+  },  -- Option + Left Arrow -> Move cursor back one word
+  { key = 'LeftArrow', mods = 'OPT', action = act.SendString '\x1bb' },
+  
+  -- Option + Right Arrow -> Move cursor forward one word (NOT WORKING RIGHT NOW BECAUSE OF SOME KEYBIND FINDER)
+  { key = 'RightArrow', mods = 'OPT', action = act.SendString '\x1bf' },
 }
-
 
 -- Dim unfocused windows so the focused one is obvious at a glance.
 local UNFOCUSED_FOREGROUND_TEXT_HSB = { hue = 1.0, saturation = 0.25, brightness = 0.45 }
