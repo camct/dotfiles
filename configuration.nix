@@ -38,6 +38,8 @@
       "herdr"
       "tmux"
       "python"
+      "node"
+      "aws-sam-cli"
     ];
     casks = [
       "wezterm"
