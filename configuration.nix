@@ -40,6 +40,7 @@
       "python"
       "node"
       "aws-sam-cli"
+      "awscli"
     ];
     casks = [
       "wezterm"
